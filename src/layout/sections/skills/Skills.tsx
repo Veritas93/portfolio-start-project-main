@@ -6,7 +6,10 @@ import { SectionTitle } from "../../../components/sectionTitle/SectionTitle";
 export const Skills = () => {
   return (
     <StyledSkills>
-      <SectionTitle />
+      <SectionTitle
+        sectionTitle="My Tech Stack"
+        description="Technologies I've been working with recentl"
+      />
       <FlexWrapper wrap={"wrap"} justify={"space-between"}>
         <Skill iconId={"css"} title={"css3"} />
         <Skill iconId={"react"} title={"react"} />

@@ -1,11 +1,16 @@
 import styled from "styled-components";
 
-export const SectionTitle = () => {
+type SectionTitlePropsType = {
+  sectionTitle: string;
+  description?: string;
+};
+
+export const SectionTitle = (props: SectionTitlePropsType) => {
   return (
     <div>
       <StyledSectionTitle>
-        My Tech Stack
-        <h3>Technologies I've been working with recentl</h3>
+        {props.sectionTitle}
+        <h3>{props.description}</h3>
       </StyledSectionTitle>
     </div>
   );
