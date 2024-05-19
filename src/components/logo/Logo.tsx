@@ -1,9 +1,12 @@
-import { Icon } from "../icon/Icon";
+import styled from "styled-components";
+import IconLogo from "./../../assets/images/Icon.svg";
 
-export const Logo = () => {
+export const Logo = (props: any) => {
   return (
-    <a href="">
-      <Icon iconId={"logo"} />
-    </a>
+    <Link href="">
+      <img src={IconLogo} alt="Logo" />
+    </Link>
   );
 };
+
+const Link = styled.a``;

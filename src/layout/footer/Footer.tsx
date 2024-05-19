@@ -1,66 +1,101 @@
 import styled from "styled-components";
-import { Icon } from "../../components/icon/Icon";
 import { FlexWrapper } from "../../components/FlexWrapper";
+import { Theme } from "../../styles/Theme";
+import { Logo } from "../../components/logo/Logo";
+import { HeaderMenu } from "../header/headerMenu/Menu";
+import { SocialIcon } from "../../components/socialIcon/SocialIkon";
+import { Container } from "../../components/Container";
+import { Accent } from "../../components/accent";
+
+const Items = ["Home", "About", "Technologies", "Projects", "Contacts"];
 
 export const Footer = () => {
   return (
     <StyledFooter>
-      <FlexWrapper direction="column" align="center">
-        <Name>Sergey Kostin</Name>
-        <SocialList>
-          <SocialItem>
-            <SocialIconLink>
-              <Icon
-                height={"30px"}
-                width={"30px"}
-                vieBox={"0 0 30px 30px"}
-                iconId="twitter"
-              />
-            </SocialIconLink>
-          </SocialItem>
-
-          <SocialItem>
-            <SocialIconLink>
-              <Icon
-                height={"30px"}
-                width={"30px"}
-                vieBox={"0 0 30px 30px"}
-                iconId="githublogo"
-              />
-            </SocialIconLink>
-          </SocialItem>
-
-          <SocialItem>
-            <SocialIconLink>
-              <Icon
-                height={"30px"}
-                width={"30px"}
-                vieBox={"0 0 30px 30px"}
-                iconId="linkedln"
-              />
-            </SocialIconLink>
-          </SocialItem>
-        </SocialList>
-        <Copyright>@ 2024 Sergey Kostin, All Rights Reserved.</Copyright>
-      </FlexWrapper>
+      <Container>
+        <FlexWrapper justify="space-between" align="center">
+          <Logo className="footerLogo" />
+          <div className="wrapper">
+            <NumberPhone>+7-921-656-83-84</NumberPhone>
+            <Name>Sergey Kostin</Name>
+            <SocialIcon />
+          </div>
+        </FlexWrapper>
+        <FlexWrapper justify="space-between" align="end">
+          <HeaderMenu MenuItems={Items} />
+          <Copyright>
+            @ 2024 Designed and built by <Accent>Sergey Kostin</Accent> with{" "}
+            <Accent>Love</Accent> & <Accent>Coffee</Accent>.
+          </Copyright>
+        </FlexWrapper>
+      </Container>
     </StyledFooter>
   );
 };
 
 const StyledFooter = styled.footer`
-  background-color: #ddbe86;
-  min-height: 20vh;
+  background-color: ${Theme.colors.primaryBg};
+  padding: 100px 0;
+
+  color: ${Theme.colors.fontSection};
+  font-family: DM Sans;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0px;
+
+  .wrapper {
+    display: flex;
+  }
+
+  ${Container} {
+    position: relative;
+    &::before {
+      content: "";
+      display: inline-block;
+      background-color: ${Theme.colors.fontSection};
+      opacity: 0.3;
+      height: 1px;
+      width: 100%;
+
+      position: absolute;
+      bottom: 45%;
+      left: 50%;
+
+      transform: translate(-50%);
+    }
+
+    .footerLogo {
+    }
+  }
+
+  ${FlexWrapper} + ${FlexWrapper} {
+    margin-top: 60px;
+  }
 `;
 
-const Name = styled.span``;
+const Name = styled.span`
+  margin-left: 60px;
+  margin-right: 50px;
+`;
 
-const SocialList = styled.ul`
+const NumberPhone = styled.h2`
+  position: relative;
+  font-size: 18px;
+  font-weight: 400;
+  &::before {
+    content: "📱";
+    position: absolute;
+    left: -30px;
+    top: 8px;
+  }
+`;
+
+const Copyright = styled.small`
   display: flex;
-  gap: 30px;
+  ${Accent} {
+    color: transparent;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
 `;
-
-const SocialItem = styled.li``;
-
-const SocialIconLink = styled.a``;
-
-const Copyright = styled.small``;
