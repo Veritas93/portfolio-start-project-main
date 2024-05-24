@@ -1,57 +1,46 @@
-import styled from "styled-components";
+import { S } from "./SocialIcon_Styles";
 import { Icon } from "../icon/Icon";
 
-export const SocialIcon = () => {
+const iconData = [
+  {
+    height: "30px",
+    width: "30px",
+    viewBox: "0 0 30px 30px",
+    iconId: "githublogo",
+  },
+
+  {
+    height: "30px",
+    width: "30px",
+    viewBox: "0 0 30px 30px",
+    iconId: "twitter",
+  },
+
+  {
+    height: "30px",
+    width: "30px",
+    viewBox: "0 0 30px 30px",
+    iconId: "linkedln",
+  },
+];
+
+export const SocialIcon: React.FC = () => {
   return (
-    <SocialList>
-      <SocialItem>
-        <SocialIconLink>
-          <Icon
-            height={"30px"}
-            width={"30px"}
-            viewBox={"0 0 30px 30px"}
-            iconId="githublogo"
-          />
-        </SocialIconLink>
-      </SocialItem>
-
-      <SocialItem>
-        <SocialIconLink>
-          <Icon
-            height={"30px"}
-            width={"30px"}
-            viewBox={"0 0 30px 30px"}
-            iconId="twitter"
-          />
-        </SocialIconLink>
-      </SocialItem>
-
-      <SocialItem>
-        <SocialIconLink>
-          <Icon
-            height={"30px"}
-            width={"30px"}
-            viewBox={"0 0 30px 30px"}
-            iconId="linkedln"
-          />
-        </SocialIconLink>
-      </SocialItem>
-    </SocialList>
+    <S.SocialList>
+      <S.SocialItem>
+        {iconData.map((i, index) => {
+          return (
+            <S.SocialIconLink key={index}>
+              <Icon
+                height={i.height}
+                width={i.width}
+                viewBox={i.viewBox}
+                iconId={i.iconId}
+              />
+            </S.SocialIconLink>
+          );
+        })}
+      </S.SocialItem>
+    </S.SocialList>
   );
 };
-
-const SocialList = styled.ul`
-  display: flex;
-  gap: 30px;
-  margin-left: 30px;
-`;
-
-const SocialItem = styled.li``;
-
-const SocialIconLink = styled.a`
-  display: flex;
-
-  &:hover {
-    transform: translateY(-4px);
-  }
-`;

@@ -8,7 +8,7 @@ type iconPropsType = {
   color?: string;
 };
 
-export const Icon = (props: iconPropsType) => {
+export const Icon: React.FC<iconPropsType> = (props: iconPropsType) => {
   return (
     <svg
       width={props.width || "70"}

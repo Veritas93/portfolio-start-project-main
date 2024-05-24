@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { S } from "./Works_Styles";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { SectionTitle } from "../../../components/sectionTitle/SectionTitle";
 import { TabMenu } from "./tabMenu/TabMenu";
@@ -9,33 +9,37 @@ import { Container } from "../../../components/Container";
 
 const worksItems = ["ALL", "LANDING PAGE", "REACT", "SPA"];
 
-export const Works = () => {
+const workData = [
+  {
+    title: "Project Tile goes here",
+    text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+    src: fon2,
+  },
+
+  {
+    title: "Project Tile goes here",
+    text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+    src: fon3,
+  },
+];
+
+export const Works: React.FC = () => {
   return (
-    <StyledWorks>
+    <S.Works>
       <Container>
         <SectionTitle
           sectionTitle="Projects"
           description="Things I’ve built so far"
         />
         <TabMenu MenuItems={worksItems} />
-        <FlexWrapper justify="space-between" align="flex-start">
-          <Work
-            title="Project Tile goes here"
-            text="This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"
-            src={fon2}
-          />
-          <Work
-            title="Project Tile goes here"
-            text="This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"
-            src={fon3}
-          />
+        <FlexWrapper justify="space-between" align="flex-start" wrap="wrap">
+          {workData.map((w, index) => {
+            return (
+              <Work title={w.title} text={w.text} src={w.src} key={index} />
+            );
+          })}
         </FlexWrapper>
       </Container>
-    </StyledWorks>
+    </S.Works>
   );
 };
-
-const StyledWorks = styled.section`
-  min-height: 100vh;
-  background-color: #c5b6d3;
-`;

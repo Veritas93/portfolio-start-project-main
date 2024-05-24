@@ -1,49 +1,104 @@
-import styled from "styled-components";
+import { S } from "./Skills_Styles";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Skill } from "./skill/Skill";
 import { SectionTitle } from "../../../components/sectionTitle/SectionTitle";
 import { Container } from "../../../components/Container";
 
+const SkillData = [
+  {
+    iconId: "css",
+    title: "css3",
+    viewBox: "0 0 120 100",
+  },
+
+  {
+    iconId: "react",
+    title: "react",
+    viewBox: "-5 -5 120 100",
+  },
+
+  {
+    iconId: "html",
+    title: "html5",
+    viewBox: "0 0 120 100",
+  },
+
+  {
+    iconId: "js",
+    title: "js",
+    viewBox: "0 5 120 100",
+  },
+
+  {
+    iconId: "vector",
+    title: "vector",
+    viewBox: "0 3 105 100",
+  },
+
+  {
+    iconId: "bootstrap",
+    title: "bootstrap",
+    viewBox: "0 -2 88 87",
+  },
+
+  {
+    iconId: "tailwind",
+    title: "tailwind",
+    viewBox: "5 15 120 100",
+  },
+
+  {
+    iconId: "sass",
+    title: "sass",
+    viewBox: "0 -10 90 100",
+  },
+
+  {
+    iconId: "git",
+    title: "git",
+    viewBox: "-3 -5 110 110",
+  },
+
+  {
+    iconId: "greensock",
+    title: "greensock",
+    viewBox: "20 10 120 100",
+  },
+
+  {
+    iconId: "vscode",
+    title: "vscode",
+    viewBox: "2 -2 120 100",
+  },
+
+  {
+    iconId: "github",
+    title: "github",
+    viewBox: "-5 -10 100 100",
+  },
+];
+
 export const Skills = () => {
   return (
-    <StyledSkills>
+    <S.Skills>
       <Container>
         <SectionTitle
           sectionTitle="My Tech Stack"
           description="Technologies I've been working with recentl"
         />
         <FlexWrapper wrap={"wrap"} justify={"space-between"}>
-          <Skill iconId={"css"} title={"css3"} viewBox="0 0 120 100" />
-          <Skill iconId={"react"} title={"react"} viewBox="-5 -5 120 100" />
-          <Skill iconId={"html"} title={"html5"} viewBox="0 0 120 100" />
-          <Skill iconId={"js"} title={"JS"} viewBox="0 5 120 100" />
-          <Skill iconId={"vector"} title={"VECTOR"} viewBox="0 3 105 100" />
-          <Skill
-            iconId={"bootstrap"}
-            title={"BOOTSTRAP"}
-            viewBox="0 -2 88 87"
-          />
-          <Skill
-            iconId={"tailwind"}
-            title={"TAILWIND"}
-            viewBox="5 15 120 100"
-          />
-          <Skill iconId={"sass"} title={"SASS"} viewBox="0 -10 90 100" />
-          <Skill iconId={"git"} title={"GIT"} viewBox="-3 -5 110 110" />
-          <Skill
-            iconId={"greensock"}
-            title={"GREENSOCK"}
-            viewBox="20 10 120 100"
-          />
-          <Skill iconId={"vscode"} title={"VSCODE"} viewBox="2 -2 120 100" />
-          <Skill iconId={"github"} title={"GITHUB"} viewBox="-5 -10 100 100" />
+          {SkillData.map((s, index) => {
+            return (
+              <Skill
+                iconId={s.iconId}
+                key={index}
+                title={s.title}
+                viewBox={s.viewBox}
+              />
+            );
+          })}
         </FlexWrapper>
       </Container>
-    </StyledSkills>
+    </S.Skills>
   );
 };
-
-const StyledSkills = styled.section`
-  background-color: #a1eeee;
-  min-height: 100vh;
-`;

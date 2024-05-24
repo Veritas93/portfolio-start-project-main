@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Theme } from "../../styles/Theme";
+import { Font } from "../../styles/Common";
 
 type SectionTitlePropsType = {
   sectionTitle: string;
@@ -18,17 +19,24 @@ export const SectionTitle = (props: SectionTitlePropsType) => {
 };
 
 const StyledSectionTitle = styled.h2`
-  font-family: Poppins;
-  font-size: 48px;
-  font-weight: 700;
-  letter-spacing: 0px;
-  color: ${Theme.colors.fontSectionMain};
   text-align: center;
   margin-bottom: 90px;
 
+  ${Font({
+    letterSpacing: "0px",
+    family: "Poppins",
+    weight: 700,
+    color: `${Theme.colors.fontSectionMain}`,
+    Fmax: 48,
+    Fmin: 32,
+  })}
+
   h3 {
-    font-size: 32px;
-    font-weight: 400;
-    color: ${Theme.colors.fontSection};
+    ${Font({
+      weight: 400,
+      color: `${Theme.colors.fontSection}`,
+      Fmax: 32,
+      Fmin: 20,
+    })}
   }
 `;

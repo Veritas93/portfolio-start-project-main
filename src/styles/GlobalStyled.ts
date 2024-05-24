@@ -16,6 +16,8 @@ export const GlobalStyle = createGlobalStyle`
         sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        min-width: 360px;
+        width: 100%;
     }
 
     a {
@@ -36,8 +38,12 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     .App section {
-        padding: 50px 0;
+        padding: 100px 0 0 0;
         background-color: ${Theme.colors.primaryBg};
+
+        @media ${Theme.media.mobile} {
+            padding: 80px 0 0 0;
+        }
     }
     
     h3 {

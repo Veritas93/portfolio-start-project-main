@@ -3,18 +3,21 @@ import { SectionTitle } from "../../../components/sectionTitle/SectionTitle";
 import { Icon } from "../../../components/icon/Icon";
 import { Slider } from "../../../components/slyder/Slyder";
 import { FlexWrapper } from "../../../components/FlexWrapper";
-import { IconWrapper } from "../skills/skill/Skill";
+import { S } from "./../skills/Skills_Styles";
+import { Container } from "../../../components/Container";
 
-export const Testimony = () => {
+export const Testimony: React.FC = () => {
   return (
     <StyledTestimony>
-      <SectionTitle sectionTitle="Testimony" />
-      <FlexWrapper direction={"column"} align={"center"}>
-        <IconWrapper>
-          <Icon iconId="html" />
-        </IconWrapper>
-        <Slider />
-      </FlexWrapper>
+      <Container>
+        <SectionTitle sectionTitle="Testimony" />
+        <FlexWrapper direction={"column"} align={"center"}>
+          <S.IconWrapper>
+            <Icon iconId="html" />
+          </S.IconWrapper>
+          <Slider />
+        </FlexWrapper>
+      </Container>
     </StyledTestimony>
   );
 };
@@ -22,7 +25,7 @@ export const Testimony = () => {
 const StyledTestimony = styled.section`
   min-height: 50vh;
 
-  ${IconWrapper} {
+  ${S.IconWrapper} {
     margin: 20px 0 72px;
   }
 `;
