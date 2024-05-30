@@ -1,14 +1,33 @@
 import { S } from "./../Works_Styles";
 import { Link } from "./../../../../components/Link";
 
-export const TabMenu = (props: { MenuItems: Array<string> }) => {
+export type StatusPropsType = "all" | "react" | "spa" | "landing page";
+
+type TabMenuPropsType = {
+  TabsItems: Array<{
+    status: StatusPropsType;
+    title: string;
+  }>;
+  currentFilterStatus: string;
+  changeFilterStatus: (value: StatusPropsType) => void;
+};
+
+export const TabMenu = (props: TabMenuPropsType) => {
   return (
     <S.TabMenu>
       <ul>
-        {props.MenuItems.map((item: string, index: number) => {
+        {props.TabsItems.map((item, index: number) => {
           return (
             <S.ListItem key={index}>
-              <Link href="">{item}</Link>
+              <Link
+                active={props.currentFilterStatus === item.status}
+                as={"button"}
+                onClick={() => {
+                  props.changeFilterStatus(item.status);
+                }}
+              >
+                {item.title}
+              </Link>
             </S.ListItem>
           );
         })}

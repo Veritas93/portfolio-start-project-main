@@ -1,11 +1,12 @@
+import { Container } from "./../../components/Container";
 import styled from "styled-components";
 import { Theme } from "../../styles/Theme";
 import { Font } from "../../styles/Common";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { Accent } from "../../components/accent";
-import { Container } from "../../components/Container";
 
 const Footer = styled.footer`
+  position: relative;
   background-color: ${Theme.colors.primaryBg};
   padding: 100px 0;
 
@@ -35,6 +36,12 @@ const Footer = styled.footer`
       left: 50%;
 
       transform: translate(-50%);
+    }
+
+    @media ${Theme.media.tablet} {
+      ${FlexWrapper}:nth-child(1) {
+        flex-direction: column;
+      }
     }
   }
 

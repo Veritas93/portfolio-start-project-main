@@ -3,6 +3,7 @@ import { Theme } from "../../styles/Theme";
 
 const Slider = styled.div`
   max-width: 500px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,6 +33,7 @@ const Pagination = styled.div`
     display: inline-block;
     width: 7px;
     height: 7px;
+    transition: 0.2 ease-in-out;
 
     background-color: ${Theme.colors.accent2};
     opacity: 0.7;

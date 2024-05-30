@@ -16,7 +16,7 @@ const Fon2 = styled.div`
     background-repeat: no-repeat;
     background-image: url(${abstract});
   }
-  @media ${Theme.media.mobile} {
+  @media ${Theme.media.tablet} {
     &::after {
       left: -40%;
       top: -30%;
@@ -65,7 +65,12 @@ const MainTitle = styled.h1`
     lineHeight: "70px",
     Fmax: 58,
     Fmin: 32,
-  })}
+  })};
+
+  p {
+    display: none;
+  }
+
   @media ${Theme.media.mobile} {
     line-height: 50px;
   }
@@ -73,6 +78,8 @@ const MainTitle = styled.h1`
 
 const Photo = styled.img`
   position: relative;
+  display: flex;
+  flex-grow: 1;
   width: 349px;
   height: 349px;
   border-radius: 50%;

@@ -4,11 +4,33 @@ import { Theme } from "../../../styles/Theme";
 import { Link } from "../../../components/Link";
 import { Button } from "../../../components/Button";
 
+// tabMenu
+
+const TabMenu = styled.nav`
+  ul {
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto 40px;
+  }
+`;
+
+const ListItem = styled.li``;
+
+// Works
+
 const Works = styled.section`
+  position: relative;
   min-height: 50vh;
   background-color: #c5b6d3;
   ${FlexWrapper} {
-    gap: 30px;
+    gap: 48px;
+  }
+  @media ${Theme.media.sliderWorks} {
+    ${TabMenu} {
+      display: none;
+    }
   }
 `;
 
@@ -20,8 +42,6 @@ const Description = styled.div`
 
 const Work = styled.div`
   background-color: ${Theme.colors.bacCard};
-  width: 330px;
-  flex-grow: 1;
   border-radius: 5%;
 
   ${Link} {
@@ -30,10 +50,6 @@ const Work = styled.div`
     & + ${Link} {
       margin-left: 80px;
     }
-  }
-
-  @media ${Theme.media.desktop} {
-    max-width: 540px;
   }
 `;
 
@@ -45,7 +61,8 @@ const ImageWrapper = styled.div`
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%, -40%);
+    transition: ${Theme.animation.transition};
 
     &::before {
       width: 100%;
@@ -61,9 +78,10 @@ const ImageWrapper = styled.div`
     top: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(2px);
     border-radius: 5% 5% 0 0;
     opacity: 0;
+    transition: ${Theme.animation.transition};
   }
 
   &:hover {
@@ -72,6 +90,7 @@ const ImageWrapper = styled.div`
     }
 
     ${Button} {
+      transform: translate(-50%, -50%);
       opacity: 1;
     }
   }
@@ -99,21 +118,6 @@ const Title = styled.h3``;
 const Text = styled.p`
   margin: 14px 0 10px;
 `;
-
-// tabMenu
-
-const TabMenu = styled.nav`
-  ul {
-    display: flex;
-    justify-content: space-between;
-    max-width: 400px;
-    width: 100%;
-    border: 2px solid red;
-    margin: 0 auto 40px;
-  }
-`;
-
-const ListItem = styled.li``;
 
 export const S = {
   Works,

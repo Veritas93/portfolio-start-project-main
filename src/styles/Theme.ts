@@ -14,8 +14,13 @@ export const Theme = {
   },
 
   media: {
-    tablet: "screen and (max-width: 786px)",
+    sliderWorks: "screen and (max-width: 823px)",
+    tablet: "screen and (max-width: 820px)",
     mobile: "screen and (max-width: 576px)",
     desktop: "screen and (min-width: 1440px)",
+  },
+
+  animation: {
+    transition: "0.2s ease-in-out",
   },
 };

@@ -1,12 +1,10 @@
 import styled, { css } from "styled-components";
 import { Theme } from "../../../styles/Theme";
+import { Link } from "react-scroll";
 
-const Link = styled.a`
-  font-family: "DM-Sans", sans-serif;
-  font-weight: 500;
-  font-size: 20px;
-  text-align: center;
-  color: transparent;
+const MenuItem = styled.li`
+  position: relative;
+  margin-right: 30px;
 `;
 
 const Mask = styled.span`
@@ -17,6 +15,7 @@ const Mask = styled.span`
   height: 50%;
   overflow-y: hidden;
   color: ${Theme.colors.fontSection};
+  transition: ${Theme.animation.transition};
 
   & + & {
     top: 50%;
@@ -27,8 +26,12 @@ const Mask = styled.span`
   }
 `;
 
-const MenuItem = styled.li`
-  position: relative;
+const NavLink = styled(Link)`
+  font-family: "DM-Sans", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  color: transparent;
 
   &::before {
     content: "";
@@ -43,9 +46,11 @@ const MenuItem = styled.li`
     z-index: 1;
 
     transform: scale(0);
+    transition: ${Theme.animation.transition};
   }
 
-  &:hover {
+  &:hover,
+  &.active {
     &::before {
       transform: scale(1);
     }
@@ -134,23 +139,37 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   align-items: center;
   justify-content: center;
   background-color: rgba(36, 35, 35, 0.8);
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: 1s ease-in-out;
 
-  ${(props) =>
-    props.isOpen &&
-    css<{ isOpen: boolean }>`
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    `}
+  &:last-child {
+    margin-left: 0px;
+  }
 
   ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 10px;
+    transition: 1s ease-in-out;
+
+    li {
+      margin-right: 0;
+    }
   }
+
+  ${(props) =>
+    props.isOpen &&
+    css<{ isOpen: boolean }>`
+      transform: translateY(0);
+      & ul {
+        gap: 40px;
+      }
+    `}
 
   ul + ul {
     display: flex;
@@ -166,7 +185,6 @@ const DesktopMenu = styled.nav`
   ul {
     justify-content: center;
     display: flex;
-    gap: 30px;
   }
 
   @media ${Theme.media.mobile} {
@@ -175,7 +193,7 @@ const DesktopMenu = styled.nav`
 `;
 
 export const S = {
-  Link,
+  NavLink,
   MenuItem,
   Mask,
   MobileMenu,

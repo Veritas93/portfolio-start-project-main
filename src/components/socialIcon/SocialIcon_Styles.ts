@@ -10,11 +10,11 @@ const SocialList = styled.ul`
 const SocialItem = styled.li`
   display: flex;
   gap: 30px;
-  margin-left: 30px;
 `;
 
 const SocialIconLink = styled.a`
   display: flex;
+  transition: ${Theme.animation.transition};
 
   &:hover {
     transform: translateY(-4px);

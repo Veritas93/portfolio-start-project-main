@@ -5,7 +5,7 @@ import { Container } from "../../../components/Container";
 
 export const Contact: React.FC = () => {
   return (
-    <S.Contact>
+    <S.Contacts id="contacts">
       <Container>
         <SectionTitle sectionTitle="Contact" />
         <S.Form>
@@ -15,6 +15,6 @@ export const Contact: React.FC = () => {
           <Button type={"submit"}>Send message</Button>
         </S.Form>
       </Container>
-    </S.Contact>
+    </S.Contacts>
   );
 };

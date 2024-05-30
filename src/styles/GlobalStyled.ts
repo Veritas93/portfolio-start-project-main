@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
         sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        min-width: 360px;
+        min-width: 470px;
         width: 100%;
     }
 

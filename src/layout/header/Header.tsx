@@ -7,7 +7,40 @@ import { MobileMenu } from "./headerMenu/mobileMenu/MobileMenu";
 import { S } from "./Header_Styles";
 import React from "react";
 
-const Items = ["Home", "About", "Tech Stack", "Projects", "Contacts"];
+export interface MyObject {
+  title: string;
+  href: string;
+}
+
+export interface MyComponentProps {
+  items: MyObject[];
+}
+const Items = [
+  {
+    title: "Home",
+    href: "home",
+  },
+
+  {
+    title: "Tech Stack",
+    href: "tech stack",
+  },
+
+  {
+    title: "Projects",
+    href: "projects",
+  },
+
+  {
+    title: "Testimony",
+    href: "testimony",
+  },
+
+  {
+    title: "Contacts",
+    href: "contacts",
+  },
+];
 
 export const Header: React.FC = () => {
   const [width, setWidth] = React.useState(window.innerWidth);
@@ -25,9 +58,9 @@ export const Header: React.FC = () => {
           <Logo />
           <div className="wrapper">
             {width < breakpoint ? (
-              <MobileMenu MenuItems={Items} />
+              <MobileMenu items={Items} />
             ) : (
-              <DesktopMenu MenuItems={Items} />
+              <DesktopMenu items={Items} />
             )}
             <SocialIcon />
           </div>

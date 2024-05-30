@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const Skills = styled.section`
+  position: relative;
   background-color: #a1eeee;
   min-height: 50vh;
 `;

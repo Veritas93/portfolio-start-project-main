@@ -1,25 +1,49 @@
 import { S } from "./Slider_Styles";
-import { FlexWrapper } from "../FlexWrapper";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
+import "./../../styles/Slider.css";
+
+type SlidePropsType = {
+  text: string;
+  userName: string;
+};
+
+const Slide = (props: SlidePropsType) => {
+  return (
+    <S.Slide>
+      <S.Text>{props.text}</S.Text>
+      <S.Name>{props.userName}</S.Name>
+    </S.Slide>
+  );
+};
+
+const items = [
+  <Slide
+    userName={"@Ivan Ivanov"}
+    text={
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit magnam incidunt eos nisi, repudiandae animi impedit fugiat quasi, corrupti ipsum adipisci hic obcaecati, labore totam nam dolorum voluptate aut qui."
+    }
+  />,
+
+  <Slide
+    userName={"@Petr Petrov"}
+    text={
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit magnam incidunt eos nisi, repudiandae animi impedit fugiat quasi, corrupti ipsum adipisci hic obcaecati, labore totam nam dolorum voluptate aut qui."
+    }
+  />,
+
+  <Slide
+    userName={"@Dmitriy Dmitrov"}
+    text={
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit magnam incidunt eos nisi, repudiandae animi impedit fugiat quasi, corrupti ipsum adipisci hic obcaecati, labore totam nam dolorum voluptate aut qui."
+    }
+  />,
+];
 
 export const Slider: React.FC = () => {
   return (
     <S.Slider>
-      <FlexWrapper>
-        <S.Slide>
-          <S.Text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-            suscipit obcaecati fugit facere repellendus quam placeat illo libero
-            cupiditate accusamus facilis, repellat aliquid blanditiis minima
-            temp
-          </S.Text>
-          <S.Name>@Ivan Ivanov</S.Name>
-        </S.Slide>
-      </FlexWrapper>
-      <S.Pagination>
-        <span> </span>
-        <span className="active"> </span>
-        <span> </span>
-      </S.Pagination>
+      <AliceCarousel mouseTracking items={items} />;
     </S.Slider>
   );
 };

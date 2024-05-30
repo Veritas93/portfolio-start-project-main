@@ -6,13 +6,38 @@ import { SocialIcon } from "../../components/socialIcon/SocialIkon";
 import { Container } from "../../components/Container";
 import { Accent } from "../../components/accent";
 
-const Items = ["Home", "About", "Technologies", "Projects", "Contacts"];
+const Items = [
+  {
+    title: "Home",
+    href: "home",
+  },
+
+  {
+    title: "Technologies",
+    href: "tech stack",
+  },
+
+  {
+    title: "Projects",
+    href: "projects",
+  },
+
+  {
+    title: "Testimony",
+    href: "testimony",
+  },
+
+  {
+    title: "Contacts",
+    href: "contacts",
+  },
+];
 
 export const Footer: React.FC = () => {
   return (
     <S.Footer>
       <Container>
-        <FlexWrapper justify="space-between" align="center" direction="column">
+        <FlexWrapper justify="space-between" align="center" direction="row">
           <Logo />
           <div className="wrapper">
             <S.NumberPhone>+7-921-656-83-84</S.NumberPhone>
@@ -21,7 +46,7 @@ export const Footer: React.FC = () => {
           </div>
         </FlexWrapper>
         <FlexWrapper justify="center" align="end" wrap="wrap">
-          <DesktopMenu MenuItems={Items} />
+          <DesktopMenu items={Items} />
           <S.Copyright>
             @ 2024 Designed and built by <Accent>Sergey Kostin</Accent> with{" "}
             <Accent>Love</Accent> & <Accent>Coffee</Accent>.

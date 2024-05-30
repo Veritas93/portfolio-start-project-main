@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { Theme } from "../../../styles/Theme";
 
-const Contact = styled.section``;
+const Contacts = styled.section`
+  position: relative;
+`;
 
 const Form = styled.form`
   textarea {
@@ -39,7 +41,7 @@ const Field = styled.input`
 `;
 
 export const S = {
-  Contact,
+  Contacts,
   Form,
   Field,
 };
