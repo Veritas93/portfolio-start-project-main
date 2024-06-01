@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Theme } from "../../../styles/Theme";
 
 const Skills = styled.section`
   position: relative;
@@ -31,6 +32,13 @@ const Skill = styled.div`
   margin-left: 10px;
   margin-right: 10px;
   flex-grow: 1;
+  @media ${Theme.media.mobileSkill} {
+    &::before {
+      width: 110px;
+      height: 110px;
+    }
+    padding: 30px 70px;
+  }
 `;
 
 const SkillTitle = styled.h3`

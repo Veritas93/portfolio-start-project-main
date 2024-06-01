@@ -64,7 +64,7 @@ const Name = styled.span`
   }
 `;
 
-const NumberPhone = styled.h2`
+const NumberPhone = styled.a`
   position: relative;
 
   ${Font({

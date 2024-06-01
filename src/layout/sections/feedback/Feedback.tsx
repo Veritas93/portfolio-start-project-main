@@ -3,14 +3,14 @@ import { SectionTitle } from "../../../components/sectionTitle/SectionTitle";
 import { Icon } from "../../../components/icon/Icon";
 import { Slider } from "../../../components/slyder/Slyder";
 import { FlexWrapper } from "../../../components/FlexWrapper";
-import { S } from "./../skills/Skills_Styles";
+import { S } from "../skills/Skills_Styles";
 import { Container } from "../../../components/Container";
 
-export const Testimony: React.FC = () => {
+export const Feedback: React.FC = () => {
   return (
-    <StyledTestimony id="testimony">
+    <StyledFeedback id="feedback">
       <Container>
-        <SectionTitle sectionTitle="Testimony" />
+        <SectionTitle sectionTitle="Feedback" />
         <FlexWrapper direction={"column"} align={"center"}>
           <S.IconWrapper>
             <Icon iconId="html" />
@@ -18,11 +18,11 @@ export const Testimony: React.FC = () => {
           <Slider />
         </FlexWrapper>
       </Container>
-    </StyledTestimony>
+    </StyledFeedback>
   );
 };
 
-const StyledTestimony = styled.section`
+const StyledFeedback = styled.section`
   position: relative;
   min-height: 50vh;
 

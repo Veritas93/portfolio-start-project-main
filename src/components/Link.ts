@@ -23,7 +23,7 @@ export const Link = styled.a<{ active?: boolean }>`
 
     position: absolute;
     z-index: -1;
-    bottom: 4px;
+    bottom: 1px;
     left: 0;
     right: 0;
     height: 0;

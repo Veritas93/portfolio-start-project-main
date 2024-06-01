@@ -5,33 +5,7 @@ import { DesktopMenu } from "./../header/headerMenu/DesktopMenu/DesktopMenu";
 import { SocialIcon } from "../../components/socialIcon/SocialIkon";
 import { Container } from "../../components/Container";
 import { Accent } from "../../components/accent";
-
-const Items = [
-  {
-    title: "Home",
-    href: "home",
-  },
-
-  {
-    title: "Technologies",
-    href: "tech stack",
-  },
-
-  {
-    title: "Projects",
-    href: "projects",
-  },
-
-  {
-    title: "Testimony",
-    href: "testimony",
-  },
-
-  {
-    title: "Contacts",
-    href: "contacts",
-  },
-];
+import { Items } from "./consts";
 
 export const Footer: React.FC = () => {
   return (
@@ -40,7 +14,9 @@ export const Footer: React.FC = () => {
         <FlexWrapper justify="space-between" align="center" direction="row">
           <Logo />
           <div className="wrapper">
-            <S.NumberPhone>+7-921-656-83-84</S.NumberPhone>
+            <S.NumberPhone href="tel:+79216568384">
+              +7-921-656-83-84
+            </S.NumberPhone>
             <S.Name>Sergey Kostin</S.Name>
             <SocialIcon />
           </div>

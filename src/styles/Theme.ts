@@ -15,9 +15,10 @@ export const Theme = {
 
   media: {
     sliderWorks: "screen and (max-width: 823px)",
-    tablet: "screen and (max-width: 820px)",
+    tablet: "screen and (max-width: 913px)",
     mobile: "screen and (max-width: 576px)",
     desktop: "screen and (min-width: 1440px)",
+    mobileSkill: "screen and (max-width: 470px)",
   },
 
   animation: {

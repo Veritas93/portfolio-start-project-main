@@ -6,6 +6,7 @@ import { SocialIcon } from "../../components/socialIcon/SocialIkon";
 import { MobileMenu } from "./headerMenu/mobileMenu/MobileMenu";
 import { S } from "./Header_Styles";
 import React from "react";
+import { Items } from "./consts";
 
 export interface MyObject {
   title: string;
@@ -15,32 +16,6 @@ export interface MyObject {
 export interface MyComponentProps {
   items: MyObject[];
 }
-const Items = [
-  {
-    title: "Home",
-    href: "home",
-  },
-
-  {
-    title: "Tech Stack",
-    href: "tech stack",
-  },
-
-  {
-    title: "Projects",
-    href: "projects",
-  },
-
-  {
-    title: "Testimony",
-    href: "testimony",
-  },
-
-  {
-    title: "Contacts",
-    href: "contacts",
-  },
-];
 
 export const Header: React.FC = () => {
   const [width, setWidth] = React.useState(window.innerWidth);

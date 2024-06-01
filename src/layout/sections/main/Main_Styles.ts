@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Theme } from "../../../styles/Theme";
 import abstract from "./../../../assets/images/Abstract.png";
 import { Font } from "../../../styles/Common";
+import { FlexWrapper } from "../../../components/FlexWrapper";
 
 const Fon2 = styled.div`
   position: relative;
@@ -18,8 +19,8 @@ const Fon2 = styled.div`
   }
   @media ${Theme.media.tablet} {
     &::after {
-      left: -40%;
-      top: -30%;
+      left: -35%;
+      top: 10%;
     }
   }
 `;
@@ -31,7 +32,7 @@ const SmallText = styled.h2`
     weight: 700,
     color: `${Theme.colors.fontMain}`,
     lineHeight: "70px",
-    Fmax: 58,
+    Fmax: 50,
     Fmin: 32,
   })}
   @media ${Theme.media.mobile} {
@@ -47,7 +48,7 @@ const Name = styled.h2`
     weight: 700,
     color: "transparent",
     lineHeight: "70px",
-    Fmax: 58,
+    Fmax: 50,
     Fmin: 32,
   })}
   white-space: nowrap;
@@ -63,9 +64,10 @@ const MainTitle = styled.h1`
     weight: 700,
     color: `${Theme.colors.fontMain}`,
     lineHeight: "70px",
-    Fmax: 58,
+    Fmax: 50,
     Fmin: 32,
   })};
+  position: absolute;
 
   p {
     display: none;
@@ -90,10 +92,13 @@ const Photo = styled.img`
   background-origin: border-box;
   background-clip: content-box, border-box;
 
+  @media ${Theme.media.tablet} {
+    margin-top: 180px;
+  }
+
   @media ${Theme.media.mobile} {
     width: 310px;
     height: 310px;
-    margin-bottom: 280px;
   }
 `;
 
@@ -101,7 +106,10 @@ const Main = styled.section`
   display: flex;
   min-height: 100vh;
   letter-spacing: -1px;
-  @media ${Theme.media.mobile} {
+  @media ${Theme.media.tablet} {
+    & ${FlexWrapper}:first-child {
+      flex-direction: column;
+    }
   }
 `;
 

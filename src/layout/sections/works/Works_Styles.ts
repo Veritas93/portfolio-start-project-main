@@ -119,6 +119,17 @@ const Text = styled.p`
   margin: 14px 0 10px;
 `;
 
+// SliderWorks
+
+const Slider = styled.div`
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 export const S = {
   Works,
   Description,
@@ -129,4 +140,5 @@ export const S = {
   Text,
   ListItem,
   TabMenu,
+  Slider,
 };
