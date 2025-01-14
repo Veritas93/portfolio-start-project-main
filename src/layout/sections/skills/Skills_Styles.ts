@@ -42,7 +42,7 @@ const Skill = styled.div`
 `;
 
 const SkillTitle = styled.h3`
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   margin: 10px 0 15px;
 `;
 

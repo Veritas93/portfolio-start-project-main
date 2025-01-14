@@ -40,7 +40,7 @@ const ButtonWrapper = styled.div`
 
     text-transform: lowercase;
     height: 100px;
-    max-width: 470px;
+    max-width: 570px;
     width: 100%;
     background: linear-gradient(
       to right,

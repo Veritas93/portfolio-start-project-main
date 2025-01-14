@@ -13,7 +13,7 @@ export const Feedback: React.FC = () => {
         <SectionTitle sectionTitle="Feedback" />
         <FlexWrapper direction={"column"} align={"center"}>
           <S.IconWrapper>
-            <Icon iconId="html" />
+            <Icon iconId="feedback" viewBox="0 0 64 64" />
           </S.IconWrapper>
           <Slider />
         </FlexWrapper>

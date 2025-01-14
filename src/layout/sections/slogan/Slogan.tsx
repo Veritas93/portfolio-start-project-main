@@ -10,7 +10,7 @@ export const Slogan: React.FC = () => {
         <FlexWrapper direction="column" align="center">
           <S.SloganTitle>I Am Available For Freelance</S.SloganTitle>
           <S.ButtonWrapper>
-            <Button>Loli93@yandex.ru</Button>
+            <Button>serg.v.kostin@gmail.com</Button>
           </S.ButtonWrapper>
         </FlexWrapper>
       </Container>
