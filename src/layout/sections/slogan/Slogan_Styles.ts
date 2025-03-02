@@ -34,7 +34,7 @@ const ButtonWrapper = styled.div`
       weight: 700,
       color: "transparent",
       lineHeight: "70px",
-      Fmax: 58,
+      Fmax: 48,
       Fmin: 32,
     })}
 

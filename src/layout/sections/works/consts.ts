@@ -6,26 +6,26 @@ import fon5 from "./../../../assets/images/fon5.webp";
 import fon6 from "./../../../assets/images/fon6.webp";
 export const workData = [
   {
-    title: "Project Tile goes here",
-    text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+    title: "Catch Google",
+    text: "This project is similar to Pac-Man where two players are trying to catch Google search using websockets",
     src: fon2,
     type: "spa",
     id: 1,
   },
 
   {
-    title: "Project Tile goes here",
-    text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+    title: "Capture Cove",
+    text: "Multi-functional photo stock (analogous to Instagram) project on Next.js",
     src: fon3,
     type: "react",
     id: 2,
   },
 
   {
-    title: "Project Tile goes here",
-    text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+    title: "TaskTracker - Do it now",
+    text: "An application that allows you to optimize the working time of company employees.",
     src: fon4,
-    type: "spa",
+    type: "react",
     id: 3,
   },
 
