@@ -38,6 +38,7 @@ const Works = styled.section`
 
 const Description = styled.div`
   padding: 10px 30px;
+  min-height: 210px;
 `;
 
 const Work = styled.div`

@@ -11,6 +11,8 @@ export const workData = [
     src: fon2,
     type: "spa",
     id: 1,
+    hrefLive: "https://game-catch-google-1.onrender.com/",
+    hrefCode: "https://github.com/Veritas93/Game_Catch_Google"
   },
 
   {
@@ -19,14 +21,18 @@ export const workData = [
     src: fon3,
     type: "react",
     id: 2,
+    hrefLive: "https://tehnom.org/",
+    hrefCode: "https://github.com/tehnometeory/inctagram-frontend"
   },
 
   {
-    title: "TaskTracker - Do it now",
+    title: "Task Tracker",
     text: "An application that allows you to optimize the working time of company employees.",
     src: fon4,
     type: "react",
     id: 3,
+    hrefLive: "https://veritas93.github.io/1-todolist",
+    hrefCode: "https://github.com/Veritas93/1-todolist"
   },
 
   {
@@ -35,6 +41,8 @@ export const workData = [
     src: fon1,
     type: "react",
     id: 4,
+    hrefLive: "#",
+    hrefCode: "#"
   },
 
   {
@@ -43,6 +51,8 @@ export const workData = [
     src: fon5,
     type: "spa",
     id: 5,
+    hrefLive: "#",
+    hrefCode: "#"
   },
 
   {
@@ -51,5 +61,7 @@ export const workData = [
     src: fon6,
     type: "react",
     id: 6,
+    hrefLive: "#",
+    hrefCode: "#"
   },
 ];

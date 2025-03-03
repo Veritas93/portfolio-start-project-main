@@ -11,6 +11,8 @@ export const items = workData.map((wo) => {
       src={wo.src}
       type={wo.type}
       key={wo.id}
+      hrefCode={wo.hrefCode}
+      hrefLive={wo.hrefLive}
     />
   );
 });

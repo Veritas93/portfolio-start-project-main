@@ -99,6 +99,8 @@ export const Works: React.FC = () => {
                       src={w.src}
                       type={w.type}
                       key={w.id}
+                      hrefCode={w.hrefCode}
+                      hrefLive={w.hrefLive}
                     />
                   </motion.div>
                 );
