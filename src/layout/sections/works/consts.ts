@@ -36,12 +36,12 @@ export const workData = [
   },
 
   {
-    title: "Project Tile goes here",
-    text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+    title: "Re-Action",
+    text: "Это сервис по автоматизации поиска работы",
     src: fon1,
     type: "react",
     id: 4,
-    hrefLive: "#",
+    hrefLive: "https://service.re-action.online",
     hrefCode: "#"
   },
 
